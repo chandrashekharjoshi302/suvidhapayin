@@ -1,0 +1,43 @@
+/* .dashboard {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--bg-color);
+  transition: margin-left 0.3s ease;
+} */
+
+/* .dashboard.expanded {
+  margin-left: 250px;
+}
+
+.dashboard.collapsed {
+  margin-left: 80px;
+} */
+
+/* .dashboard-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.wallet-balance, .cards-overview {
+  background-color: var(--card-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.pie-chart {
+  height: 200px;
+} */
+
+
+
+.dashboard {
+  padding: 20px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}

@@ -1,0 +1,51 @@
+:root {
+  --bg-color: #ffffff;
+  --card-bg-color: #f8f9fa;
+  --text-color: #212529;
+}
+
+.dark-mode {
+  --bg-color: #343a40;
+  --card-bg-color: #495057;
+  --text-color: #f8f9fa;
+}
+
+.light-mode {
+  --bg-color: #ffffff;
+  --card-bg-color: #f8f9fa;
+  --text-color: #212529;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.dashboard {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+} 
+
+/* .dashboard.expanded {
+  margin-left: 250px;
+} */
+
+/* .dashboard.collapsed {
+  margin-left: 80px;
+}
+  */
+
+

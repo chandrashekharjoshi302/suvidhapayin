@@ -1,0 +1,29 @@
+.dashboard-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card-header {
+  margin-bottom: 20px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.card-value {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.card-percentage {
+  font-size: 1em;
+}
+
+.card-footer {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  font-size: 0.9em;
+}
