@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import './AddMember.css';
 
 const AddMember = () => {
@@ -8,7 +10,7 @@ const AddMember = () => {
     lastName: '',
     mobileNo: '',
     email: '',
-    dob: '',
+    dob: null, // Use null initially for DatePicker
     address: '',
     city: '',
     state: '',
@@ -26,9 +28,15 @@ const AddMember = () => {
     });
   };
 
+  const handleDateChange = (date) => {
+    setFormValues({
+      ...formValues,
+      dob: date,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to the server)
     console.log('Form submitted:', formValues);
   };
 
@@ -62,7 +70,13 @@ const AddMember = () => {
         </div>
         <div className="form-group">
           <label htmlFor="dob">DOB</label>
-          <input type="date" id="dob" name="dob" value={formValues.dob} onChange={handleChange} />
+          <DatePicker
+            selected={formValues.dob}
+            onChange={handleDateChange}
+            dateFormat="yyyy/MM/dd"
+            placeholderText="Select DOB"
+            className="form-control"
+          />
         </div>
         <div className="form-group">
           <label htmlFor="address">Address</label>

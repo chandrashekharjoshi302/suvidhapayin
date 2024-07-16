@@ -4,10 +4,11 @@ import Navbar from "./components/Layout/Navbar";
 import Sidebar from "./components/Layout/Sidebarr";
 import Dashboard from "./components/Layout/Dashboard";
 import AddMember from "./components/Layout/AddMember";
-import MemberList from "./components/Layout/MemberList";
+import MemberList from "./components/Layout/TestMember";
 import Analytics from "./components/Layout/Analytics";
 import Deactivate from "./components/Layout/Deactivate";
 import Pending from "./components/Layout/Pending";
+import TestMember from "./components/Layout/TestMember";
 
 import Active from "./components/Layout/Active";
 import "./App.css";
@@ -34,13 +35,13 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/add-member" element={<AddMember />} />
+            <Route path="/add-member" element={<TestMember />} />
             <Route path="/member" element={<AddMember />} />
             <Route path="/Deactivate_Member" element={<Deactivate />} />
             <Route path="/Pending_Member" element={<Pending />} />
-
             <Route path="/Active_Member" element={<Active />} />
             <Route path="/Analytics" element={<Analytics />} />
+            <Route path="/TestMember" element={<TestMember />} />
           </Routes>
         </div>
       </div>

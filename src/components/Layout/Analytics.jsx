@@ -43,8 +43,14 @@ const Analytics = () => {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DatePicker
                 label="Select Date Range"
-                value={dateRange}
-                onChange={(newValue) => setDateRange(newValue)}
+                value={dateRange[0]}
+                onChange={(newValue) => setDateRange([newValue, dateRange[1]])}
+                renderInput={(props) => <TextField {...props} fullWidth />}
+              />
+              <DatePicker
+                label="To"
+                value={dateRange[1]}
+                onChange={(newValue) => setDateRange([dateRange[0], newValue])}
                 renderInput={(props) => <TextField {...props} fullWidth />}
               />
             </LocalizationProvider>
